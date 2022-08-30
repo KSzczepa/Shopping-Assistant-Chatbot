@@ -1,0 +1,11 @@
+<launch>
+  <arg name="nao_ip" default="$(optenv NAO_IP 10.0.1.230)" />
+  <arg name="nao_port" default="$(optenv NAO_PORT 9559)" />
+  
+  <node pkg="pepper_nodes" type="wakeup_node.py" name="wakeup_node" required="true" args="--ip=$(arg nao_ip) --port=$(arg nao_port)" output="screen" />
+  <node pkg="pepper_nodes" type="head_motion_node.py" name="head_motion_node" required="true" args="--ip=$(arg nao_ip) --port=$(arg nao_port)" output="screen" />
+  <node pkg="pepper_nodes" type="tablet_node.py" name="tablet_node" required="true" args="--ip=$(arg nao_ip) --port=$(arg nao_port)" output="screen" />
+  <node pkg="pepper_nodes" type="text2speech_node.py" name="text2speech" required="true" args="--ip=$(arg nao_ip) --port=$(arg nao_port)" output="screen" />
+  <node pkg="pepper_nodes" type="image_input_node.py" name="image_input" required="true" args="--ip=$(arg nao_ip) --port=$(arg nao_port)" output="screen" />
+
+</launch>

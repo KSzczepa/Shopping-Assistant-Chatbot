@@ -1,0 +1,15 @@
+<launch>    
+    <arg name="nao_ip" default="$(optenv NAO_IP 10.0.1.230)" />
+    <arg name="nao_port" default="$(optenv NAO_PORT 9559)" />
+    <node pkg="pepper_nodes" type="text2speech_node.py" name="text2speech" required="true" args="--ip=$(arg nao_ip) --port=$(arg nao_port)" output="screen" /> 
+    <arg name="node_start_delay" default="100.0" /> 
+    <node pkg="rasa_ros" name="rasa_action" type="rasa_action.sh" output="screen"/>
+    <node pkg="rasa_ros" name="rasa_server" type="rasa_server.sh" output="screen"/> 
+    <node pkg="rasa_ros" name="dialogue_server" type="dialogue_server.py" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+    <node pkg="rasa_ros" name="dialogue_interface" type="dialogue_interface.py" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+    <node pkg="rasa_ros" type="main.py" name="main" output="screen"/>
+    <node pkg="ros_audio_pkg" type="voice_detection.py" name="voice_detection" output="screen"/>
+    <node pkg="ros_audio_pkg" type="asr.py" name="asr"/>
+    <node pkg="ros_audio_pkg" type="speaker_identification.py" name="speaker_identification"/>
+    
+</launch>

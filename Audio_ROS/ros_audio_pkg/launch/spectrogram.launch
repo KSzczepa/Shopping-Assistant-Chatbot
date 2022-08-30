@@ -1,0 +1,7 @@
+<launch>
+        <node pkg="ros_audio_pkg" type="voice_detection.py" name="voice_detection" output="screen"/>
+        <node pkg="ros_audio_pkg" type="spectrogram.py" name="spectrogram" output="screen"/>
+</launch>
+
+
+

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+BOT_DIR="/../../cogrob_chatbot"
+
+cd $BOT_DIR
+
+rasa run actions

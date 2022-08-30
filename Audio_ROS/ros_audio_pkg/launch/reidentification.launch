@@ -1,0 +1,8 @@
+<launch>
+        <node pkg="ros_audio_pkg" type="voice_detection.py" name="voice_detection" output="screen"/>
+        <node pkg="ros_audio_pkg" type="asr.py" name="asr"/>
+        <node pkg="ros_audio_pkg" type="speaker_identification.py" name="speaker_identification" output="screen"/>
+</launch>
+
+
+
