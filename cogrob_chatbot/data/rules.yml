@@ -1,0 +1,42 @@
+ version: "2.0"
+
+ rules: 
+
+  - rule: Say hello anytime the user says hello
+    steps: 
+    - intent: greet
+    - action: utter_hello
+    - action: check_user_existance
+
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+  - rule: New user
+    condition:
+    - slot_was_set:
+      - product: null
+    steps:
+    - intent: introduction
+    - action: check_user_existance
+    - action: utter_asistant
+ 
+  - rule: Add product
+    steps:
+    - intent: insert
+    - action: check_user_existance
+    - action: action_receive_product
+
+  - rule: Remove product     
+    steps:
+    - intent: remove
+    - action: check_user_existance
+    - action: action_remove_product
+
+  - rule: Show basket     
+    steps:
+    - intent: show
+    - action: check_user_existance
+    - action: action_show_basket
+ 

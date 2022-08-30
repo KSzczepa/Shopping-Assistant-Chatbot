@@ -1,0 +1,51 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - deny
+  - affirm
+  - insert
+  - remove
+  - show
+  - give_product
+
+entities:
+  - product
+
+actions:
+  - action_add
+  - utter_ask_product
+  - action_receive_product
+  - action_remove_product
+  - action_show_basket
+
+# entities: []
+slots:
+  product:
+    type: text
+    influence_conversation: false
+    auto_fill: true
+  product_name:
+    type: text
+    influence_conversation: false
+ 
+
+
+responses:
+  utter_ask_product:
+  - text: "Please provide your product name."
+
+  utter_hello:
+  - text: "Hey! It's good to see you"
+
+  utter_goodbye:
+  - text: "Bye"
+
+
+config:
+  store_entities_as_slots: true
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

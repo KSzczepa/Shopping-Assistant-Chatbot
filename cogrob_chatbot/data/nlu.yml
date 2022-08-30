@@ -1,0 +1,289 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hi
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - exit
+- intent: unnown_name
+  examples: |
+    - None
+    - Unnown
+- intent: introduction
+  examples: |
+    - My name is [Claudia](username)
+    - [Paul](username)
+    - I'm [Kate](username)
+    - They call me [Ted](username)
+    - [Robin](username)
+    - Hi! My name is [Robin](username)
+    - Hello. I am [Carolina](username)
+    - Hey. They call me [Alicja](username)
+    - good morning. Here it's [Victoria](username)
+    - Hi I am [Claudia](username)
+    - Hi My name is [Ted](username)
+    - [Claudia](username)
+    - My name is [Ola](username)
+    - [Lily](username)
+    - [Ted](username)
+    - my name is [Rachel](username)
+- intent: affirm
+  examples: |
+    - yes
+    - yes sure
+    - absolutely
+    - for sure
+    - yes yes yes
+    - definitely
+    - yeah
+    - si
+    - ok
+    - okay
+- intent: deny
+  examples: |
+    - no
+    - not today
+    - no thanks
+    - no thank you
+    - uh no
+    - noope
+    - do you have something else
+    - no this does not work for me
+- intent: insert
+  examples: |
+    - [Rachel](username): Please, add [papaja](product) to my list.
+    - [Claudia](username): I want to eat [mango](product).
+    - Hi! I am [Ted](username). I want to add [banana](product)
+    - Hello. My name is [Rachel](username) and I need [apple](product)
+    - People call me [Victoria](username). Please, put [orange](product) to my basket.
+    - Hey! Insert [papaja](product) in my shopping list.
+    - Ciao! Please, write [strawberry](product) on the shopping list.
+    - Nice to see you. Remember about [peach](product).
+    - Hi. Attach [bread](product) to the list.
+    - add [apple](product)
+    - I need [banana](product)
+    - put [peach](product)
+    - insert [milk](product)
+    - attach [orange](product)
+    - put on [bread](product)
+    - put [banana](product)
+    - need [strawberry](product)
+    - please add [berry](product)
+    - please write
+    - annotate
+    - save
+    - remember
+    - memorize
+    - memorise
+    - complete
+    - fill out
+    - fill in
+    - I want
+    - want
+    - buy [apple](product)
+    - I should buy
+    - Remind me to buy
+    - Include
+    - I want to add an [apple](product) to the basket
+    - Hi! I am Rachel. i want to add [banana](product)
+    - My name is [Ted](username) and I want [banana](product) on my list
+    - Hello. My name is [Claudia](username) and I want to add [peach](product) to my basket
+    - I want to buy [papaja](product)
+    - [Ted](username): I want [orange](product)
+    - : Hi! I want [orange](product)
+    - [Ted](username): I want to add [papaja](product)
+    - I want to have [orange](product)
+    - I said I want to have [orange](product)
+    - [Ola](username): I need [bread](product)
+    - I need [bread](product)
+- intent: remove
+  examples: |
+    - [Ted](username): Please, remove [papaja](product) from my list
+    - [Lily](username): I do not want to have [strawberry](product) in my basket
+    - [Kate](username): Delete [milk](product)
+    - delete [apple](product)
+    - remove [banana](product)
+    - I don't want [peach](product)
+    - I don't want [coffee](product) anymore
+    - I do not want [apple](product) 
+    - I do not need [milk](product)
+    - I don't need [orange](product)
+    - I do not want [bread](product)
+    - please delete [banana](product)
+    - take out [berry](product)
+    - expunge [strawberry](product)
+    - eradicate
+    - cut out
+    - clean
+    - remove
+    - annul
+    - eliminate [coffee](product)
+    - exclude
+    - clean up
+    - wipe out
+    - wipe
+    - cancel
+- intent: show
+  examples: |
+    - [John](username): I want to see my shopping list
+    - [Otis](username): Please, show me my basket
+    - Hello! My name is [Claudia](username). I would like to see my list
+    - [Marshal](username): What have I got in my basket
+    - show
+    - tell me
+    - show me
+    - display
+    - how much do I have
+    - present
+    - unveil
+    - shopping list
+    - I want to see
+    - show me basket
+    - wish list
+    - agenda
+    - enumeration
+    - want list
+    - show me the list
+    - Show me my list
+    - I want to see my basket
+    - [Lily](username): i want to see my basket
+- lookup: product
+  examples: |
+    - apple
+    - peach
+    - banana
+    - milk
+    - bread
+    - orange
+    - tangerine
+    - strawberry
+    - berry
+    - pear
+    - tangerine
+    - watermelon
+    - melon
+    - lemon
+    - apple
+    - peach
+    - banana
+    - orange
+    - strawberry
+    - blackberry
+    - blueberry
+    - raspberry
+    - apricot
+    - grape
+    - berry
+    - tomato
+    - pomegranate
+    - cherry
+    - corn
+    - carrot
+    - broccoli
+    - eggplant
+    - pepper
+    - garlic
+    - zucchini
+    - potatoe
+    - beans
+    - onions
+    - salad
+    - beetroot
+    - leeks
+    - shallots
+    - pickle
+    - pumpkin
+    - cucumber
+    - water
+    - sparkling water
+    - beer
+    - tea
+    - coffee
+    - milk
+    - juice
+    - syrup
+    - baguette
+    - bread
+    - cheese
+    - chocolate
+    - sugar
+    - salt
+    - pizza
+    - pasta
+    - meat
+    - sausage
+    - sauce
+    - eggs
+    - cereals
+    - jam
+    - ham
+    - butter
+    - oil
+    - fish
+- lookup: username
+  examples: |
+    - Lily
+    - Marshal
+    - Nadia
+    - John
+    - Natalie
+    - Natasha
+    - Rachel
+    - Monica
+    - Ross
+    - Claudia
+    - Kate
+    - Otis
+    - Alicja
+    - Paul
+    - Bob
+    - Dylan
+    - Sasha
+    - Peter
+    - Robin
+    - Coral
+    - Mike
+    - Keith
+    - Rita
+    - Tegan
+    - Sara
+    - Kane
+    - Darwin
+    - Erwin
+    - Adam
+    - George
+
+- synonim: orange
+  examples: | 
+    - orange
+    - Orange
+
+- synonim: apple
+  examples: |
+    - apple
+    - Apple

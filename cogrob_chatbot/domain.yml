@@ -1,0 +1,56 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- insert
+- introduction
+- show
+- goodbye
+- greet
+- deny
+- affirm
+- remove
+- give_product
+- unnown_name
+entities:
+- product
+- username
+slots:
+  product:
+    type: text
+    influence_conversation: false
+  username:
+    type: text
+    influence_conversation: false
+  action:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+responses:
+  utter_ask_product:
+  - text: Please provide your product name.
+  utter_hello:
+  - text: Hey! How are you?
+  - text: Hi! It is nice to see you.
+  utter_goodbye:
+  - text: Bye
+  - text: Ciao!
+  utter_ask_name:
+  - text: What is your name?
+  utter_asistant:
+  - text: How can I help you?
+actions:
+- action_add
+- action_receive_product
+- action_remove_product
+- action_show_basket
+- check_user_existance
+- reset_slots
+- update_user_database
+- utter_asistant
+- utter_ask_name
+- utter_ask_product
+- utter_goodbye
+- utter_hello
+
