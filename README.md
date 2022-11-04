@@ -1,3 +1,4 @@
+<h1>The shopping assistant-project</h1>
 The shopping-assistant project involves developing a robot to help people manage their personal shopping list. Communication was done through voice conversation with the user. For this purpose, the robot used a microphone. 
 The robot is able to manage a different list for each person it talks to:
 - If a new person is met, the robot asks for his or her name and creates a new shopping list
