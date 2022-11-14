@@ -14,7 +14,7 @@
 		</ul></p>
 <p>The shopping list is filled with items that are identified by name and quantity. </p>
 <p>There are also some environmental restrictions, such as the distance between the user and the robot (should be less than 2 meters), no ambient sounds during the conversation, and only 1 user can talk to the robot at a time.</p>
-<p>Python language is used to code this project, with the ROS package. The robot on which the software was tested is the Pepper robot.</p>
+<p>Python language is used to code this project, with the ROS package and RASA framework. The robot on which the software was tested is the Pepper robot.</p>
   
 <img src='https://user-images.githubusercontent.com/87570436/200055730-faa3e9a3-f3b4-405b-94bf-cde6bc59c054.png'/>
 <p>Picture: Architecture of the code</p>
