@@ -85,7 +85,7 @@ To manage a conversation with a user, rules had to be written on which the chatb
 <p>The voice recognition is one of the important parts of this project. When the user is speaking with the robot, the robot should know if it is a new user or not. For this we are using a voice identification.</p>
 <p>If the user is not in the data, the robot asks for his or her name and create a new shopping list for this user. But if the user already had a shopping list, then the robot skips this step.</p>
 <p>For this, I implemented some classes: CheckUser & UpdateUserDataBase (in actions.py).</p>
-p>For the voice recognition, I implemented an audio package (dialogue_interface.py & dialogue_server.py). Once the robot got the name of the user, it can work properly and do the actions he is told to do.</p>
+<p>For the voice recognition, I implemented an audio package (dialogue_interface.py & dialogue_server.py). Once the robot got the name of the user, it can work properly and do the actions he is told to do.</p>
 
 <h2>Manage robot voice</h2>
 <p>The basis for allowing the robot to speak is the NAOqi Audio API, which contains many functionalities, but I will focus on ALTextToSpeech module allows the robot to speak. It sends commands to a text-to-speech engine, and authorizes also voice customization. The result of the synthesis is sent to the robot’s loudspeakers.</p>
